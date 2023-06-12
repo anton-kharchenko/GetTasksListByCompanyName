@@ -9,13 +9,13 @@ in console command  in GetTasksListByCompanyName folder.
 For start, you must have .NET 7 on your local machine!
 
 ## Program interface:
-![Screenshot_2.png](wwwroot%2Fimg%2FScreenshot_2.png)
+![Screenshot_2.png](GetTasksListByCompanyName%2Fwwwroot%2Fimg%2FScreenshot_2.png)
 
 You can simply choose the name of company:
-![Screenshot_1.png](wwwroot%2Fimg%2FScreenshot_1.png)
+![Screenshot_1.png](GetTasksListByCompanyName%2Fwwwroot%2Fimg%2FScreenshot_1.png)
 
 You will get the next table:
-![Screenshot_3.png](wwwroot%2Fimg%2FScreenshot_3.png)
+![Screenshot_3.png](GetTasksListByCompanyName%2Fwwwroot%2Fimg%2FScreenshot_3.png)
 
 
 ## Feedback
