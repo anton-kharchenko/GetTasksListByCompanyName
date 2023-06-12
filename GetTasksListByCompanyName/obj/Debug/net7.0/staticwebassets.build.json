@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rb8xycYK9D6bt9diapxlDQlK8JSum6J23smg4194h0Q=",
+  "Hash": "Z+0/ix06+jHv3KJC1s4pz4SHAcT+6NlHOwAgESsk4Eg=",
   "Source": "GetTasksListByCompanyName",
   "BasePath": "_content/GetTasksListByCompanyName",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\img\\Screenshot_2.png",
+      "SourceId": "GetTasksListByCompanyName",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\",
+      "BasePath": "_content/GetTasksListByCompanyName",
+      "RelativePath": "img/Screenshot_2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Screenshot_2.png"
     },
     {
       "Identity": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\js\\site.js",

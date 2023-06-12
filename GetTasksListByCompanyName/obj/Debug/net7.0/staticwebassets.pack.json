@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\img\\Screenshot_2.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot_2.png"
+    },
+    {
       "Id": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

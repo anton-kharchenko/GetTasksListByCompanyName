@@ -29,9 +29,9 @@ public class HomeController : Controller
 
         // Extract the company names
         var companyNames = tasks.Values.SelectMany(c => c.Select(task => task.Company)).Distinct().ToList();
-        
+        var orderedCompanyNames = companyNames.OrderBy(i => i);
         // Pass the list of companies to the view
-        ViewBag.Companies = companyNames;
+        ViewBag.Companies = orderedCompanyNames;
 
         return View();
     }
