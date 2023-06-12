@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Generate Excel";
+}
+
+<h1>Please enter company name.</h1>
+<div> <i>Description:</i> This is simple solution for that people who prepare yourself to interview in Big Tech company.  </div>
+<div> You can choose a name of company and get Excel list with the links of tasks to this company.</div>
+<br/>
+
+<form method="post" action="/Home/GenerateExcel">
+    <div class="form-group">
+        <label for="companyName">Company Name:</label>
+        <br/>
+                <select class="form-control" id="companyName" name="companyName" required>
+                    <option value="">Select a company</option>
+                    @foreach (var company in ViewBag.Companies)
+                    {
+                        <option value="@company">@company</option>
+                    }
+                </select>
+        <br/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Generate Excel</button>
+</form>
