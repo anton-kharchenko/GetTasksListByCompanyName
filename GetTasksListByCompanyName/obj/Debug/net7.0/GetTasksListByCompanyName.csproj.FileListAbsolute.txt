@@ -39,3 +39,9 @@ C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyN
 C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\obj\Debug\net7.0\GetTasksListByCompanyName.pdb
 C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\obj\Debug\net7.0\GetTasksListByCompanyName.genruntimeconfig.cache
 C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\obj\Debug\net7.0\ref\GetTasksListByCompanyName.dll
+C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\bin\Debug\net7.0\HtmlAgilityPack.dll
+C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\bin\Debug\net7.0\AngleSharp.dll
+C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\bin\Debug\net7.0\OpenQA.Selenium.Chrome.ChromeDriverExtensions.dll
+C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\bin\Debug\net7.0\PuppeteerSharp.dll
+C:\Sourses\Projects\OpenSources\GetTasksListByCompanyName\GetTasksListByCompanyName\bin\Debug\net7.0\WebDriver.dll

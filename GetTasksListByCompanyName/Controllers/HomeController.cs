@@ -1,8 +1,14 @@
 ﻿using System.Drawing;
+using AngleSharp;
+using AngleSharp.Html.Parser;
 using Microsoft.AspNetCore.Mvc;
 using GetTasksListByCompanyName.Models;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
 using OfficeOpenXml;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using PuppeteerSharp;
 
 namespace GetTasksListByCompanyName.Controllers;
 
@@ -20,9 +26,11 @@ public class HomeController : Controller
         // Fetch the JSON data from the provided URL
         var httpClient = _httpClientFactory.CreateClient();
         var response = await httpClient.GetAsync(
-            "https://raw.githubusercontent.com/codedecks-in/Big-Omega-Extension/main/src/resources/leetcode_company_tagged_problems.json");
+            "https://raw.githubusercontent.com/ankur-lakhmara/Big-Omega-Extension/main/src/resources/leetcode_company_tagged_problems.json");
 
-        if (!response.IsSuccessStatusCode) return BadRequest("Failed to retrieve data.");
+        if (!response.IsSuccessStatusCode)
+            return BadRequest("Failed to retrieve data.");
+        
         var content = await response.Content.ReadAsStringAsync();
         // Deserialize the JSON data
         var tasks = JsonConvert.DeserializeObject<Dictionary<string, List<LeetcodeTask>>>(content);
@@ -111,8 +119,10 @@ public class HomeController : Controller
         worksheet.Cells[1, 2].Value = "Number of occur";
         worksheet.Cells[1, 3].Value = "Solved";
         worksheet.Cells[1, 4].Value = "Technique";
+        worksheet.Cells[1, 5].Value = "Level";
+        
         // Format header row in bold
-        using (var headerRange = worksheet.Cells[1, 1, 1, 4])
+        using (var headerRange = worksheet.Cells[1, 1, 1, 5])
         {
             headerRange.Style.Font.Bold = true;
         }
@@ -126,12 +136,13 @@ public class HomeController : Controller
             var occurIndex = task.IndexOf("Occur number: ", StringComparison.Ordinal) + 14;
             var solvedIndex = task.IndexOf("Solved: ", StringComparison.Ordinal) + 8;
             var techniqueIndex = task.IndexOf("Technique: ", StringComparison.Ordinal) + 11;
-
+            
             var link = task.Substring(linkIndex, occurIndex - linkIndex - 14).Trim().Replace(",", "");
             var occur = task.Substring(occurIndex, solvedIndex - occurIndex - 8).Trim().Replace(",", "");
             var solved = task.Substring(solvedIndex, techniqueIndex - solvedIndex - 11).Trim().Replace(",", "");
             var technique = task.Substring(techniqueIndex).Trim();
-
+            var level = GetTaskLevel(link).Result;
+            
             worksheet.Cells[rowIndex, 1].Hyperlink = new Uri(link);
             worksheet.Cells[rowIndex, 1].Style.Font.UnderLine = true;
             worksheet.Cells[rowIndex, 1].Style.Font.Color.SetColor(Color.Blue);
@@ -139,6 +150,7 @@ public class HomeController : Controller
             worksheet.Cells[rowIndex, 2].Value = occur;
             worksheet.Cells[rowIndex, 3].Value = solved;
             worksheet.Cells[rowIndex, 4].Value = technique;
+            worksheet.Cells[rowIndex, 5].Value = level;
 
             rowIndex++;
         }
@@ -147,5 +159,26 @@ public class HomeController : Controller
         worksheet.Cells.AutoFitColumns(0);
 
         return excelPackage.GetAsByteArray();
+    }
+
+    private async Task<string> GetTaskLevel(string taskUrl)
+    {
+        using IWebDriver driver = new ChromeDriver();
+        driver.Navigate().GoToUrl(taskUrl);
+
+        // Allow time for JavaScript to load
+        Thread.Sleep(3000);
+
+        var levelElement = driver.FindElement(By.ClassName("css-10o4wqw"));
+
+        if (levelElement != null)
+        {
+            string level = levelElement.Text.Trim();
+            Console.WriteLine($"Task Level: {level}");
+            return level;
+        }
+
+        Console.WriteLine("Level information not found.");
+        return "";
     }
 }

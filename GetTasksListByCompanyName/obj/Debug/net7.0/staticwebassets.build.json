@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z+0/ix06+jHv3KJC1s4pz4SHAcT+6NlHOwAgESsk4Eg=",
+  "Hash": "YzyQR0I3Fo6buIXjwv6EEoaIPX6rxQmB79HCOKtLFng=",
   "Source": "GetTasksListByCompanyName",
   "BasePath": "_content/GetTasksListByCompanyName",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\img\\Screenshot_1.png",
+      "SourceId": "GetTasksListByCompanyName",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\",
+      "BasePath": "_content/GetTasksListByCompanyName",
+      "RelativePath": "img/Screenshot_1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Screenshot_1.png"
+    },
+    {
       "Identity": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\img\\Screenshot_2.png",
       "SourceId": "GetTasksListByCompanyName",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Screenshot_2.png"
+    },
+    {
+      "Identity": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\img\\Screenshot_3.png",
+      "SourceId": "GetTasksListByCompanyName",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\",
+      "BasePath": "_content/GetTasksListByCompanyName",
+      "RelativePath": "img/Screenshot_3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Screenshot_3.png"
     },
     {
       "Identity": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\wwwroot\\js\\site.js",

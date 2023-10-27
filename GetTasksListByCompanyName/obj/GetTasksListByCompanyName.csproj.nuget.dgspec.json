@@ -14,14 +14,12 @@
         "outputPath": "C:\\Sourses\\Projects\\OpenSources\\GetTasksListByCompanyName\\GetTasksListByCompanyName\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Anton\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,13 +38,29 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AngleSharp": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
             "EPPlus": {
               "target": "Package",
               "version": "[6.2.4, )"
             },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.52, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "OpenQA.Selenium.Chrome.ChromeDriverExtensions": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "PuppeteerSharp": {
+              "target": "Package",
+              "version": "[11.0.2, )"
             }
           },
           "imports": [
@@ -68,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.113\\RuntimeIdentifierGraph.json"
         }
       }
     }
